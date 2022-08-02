@@ -1,6 +1,6 @@
-/* * {
+* {
     outline: 1px solid blue;
-} */
+}
 
 .wrapper {
     letter-spacing: -0.025em;
@@ -40,17 +40,39 @@
     position: relative;
 }
 
-.menu .smenu {
+.menu .smenu01 {
     position: absolute;
     display: flex;
     color: #333;
     top: 100px;
     left: 50%;
     transform: translateX(-50%);
+    font-size: 15px;
+    line-height: 40px;
 }
 
-.smenu .smenu_tit {
+.smenu01 ul {
+    width: 200px;
+}
+
+.smenu01 .smenu_tit {
     color: #f00;
+}
+
+.smenu02 {
+    display: none;
+}
+
+.smenu03 {
+    display: none;
+}
+
+.smenu04 {
+    display: none;
+}
+
+.smenu05 {
+    display: none;
 }
 
 .menu_icon {
