@@ -1,0 +1,60 @@
+/* * {
+    outline: 1px solid blue;
+} */
+
+.wrapper {
+    letter-spacing: -0.025em;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    line-height: 100px;
+    background: #000;
+    color: #ffffff;
+}
+
+.header .menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu h1 {
+    font-size: 0;
+}
+
+.menu .gnb>ul {
+    display: flex;
+    gap: 40px;
+    font-size: 17px;
+}
+
+.menu .gnb a {
+    display: block;
+}
+
+.menu .gnb>ul>li {
+    position: relative;
+}
+
+.menu .smenu {
+    position: absolute;
+    display: flex;
+    color: #333;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.smenu .smenu_tit {
+    color: #f00;
+}
+
+.menu_icon {
+    display: flex;
+    gap: 15px;
+    font-size: 17px;
+}
