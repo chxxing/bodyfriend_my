@@ -1,6 +1,6 @@
-* {
+/* * {
     outline: 1px solid blue;
-}
+} */
 
 .wrapper {
     letter-spacing: -0.025em;
@@ -12,9 +12,10 @@
 }
 
 .header {
+    position: relative;
     line-height: 100px;
     background: #000;
-    color: #ffffff;
+    color: #fff;
 }
 
 .header .menu {
@@ -32,47 +33,47 @@
     font-size: 17px;
 }
 
+.menu .gnb>ul::before {
+    content: "";
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(0, 0, 0, 0.8);
+    transition: height 0.3s;
+}
+
+.gnb>ul:hover::before {
+    height: 200px;
+}
+
 .menu .gnb a {
     display: block;
 }
 
-.menu .gnb>ul>li {
-    position: relative;
-}
-
-.menu .smenu01 {
+.menu .smenu {
     position: absolute;
     display: flex;
-    color: #333;
+    color: #fff;
     top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 15px;
-    line-height: 40px;
+    left: auto;
+    gap: 20px;
+    padding: 10px 0;
+    font-size: 15.5px;
+    font-weight: 300;
+    line-height: 30px;
+    visibility: hidden;
 }
 
-.smenu01 ul {
-    width: 200px;
+.gnb>ul li:hover>div {
+    visibility: visible;
 }
 
-.smenu01 .smenu_tit {
-    color: #f00;
-}
-
-.smenu02 {
-    display: none;
-}
-
-.smenu03 {
-    display: none;
-}
-
-.smenu04 {
-    display: none;
-}
-
-.smenu05 {
-    display: none;
+.smenu .smenu_tit {
+    color: #f4d7a1;
+    font-weight: 400;
 }
 
 .menu_icon {
