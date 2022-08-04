@@ -11,6 +11,7 @@
     margin: 0 auto;
 }
 
+/* 메뉴 */
 .header {
     position: relative;
     line-height: 100px;
@@ -33,20 +34,20 @@
     font-size: 17px;
 }
 
-.menu .gnb>ul::before {
+.menu .gnb>ul .down::before {
     content: "";
     position: absolute;
     top: 100px;
     width: 100%;
     left: 0;
-    width: 100%;
     height: 0;
     background: rgba(0, 0, 0, 0.8);
-    transition: height 0.3s;
+    transition: height 0.5s;
+    z-index: 999;
 }
 
-.gnb>ul:hover::before {
-    height: 200px;
+.gnb>ul .down:hover::before {
+    height: 175px;
 }
 
 .menu .gnb a {
@@ -65,10 +66,12 @@
     font-weight: 300;
     line-height: 30px;
     visibility: hidden;
+    z-index: 999;
 }
 
-.gnb>ul li:hover>div {
+.gnb>ul .down:hover>div {
     visibility: visible;
+    transition: visibility 0.2s;
 }
 
 .smenu .smenu_tit {
@@ -80,4 +83,116 @@
     display: flex;
     gap: 15px;
     font-size: 17px;
+}
+
+/* 메인 유튜브 동영상 */
+.main_video {
+    position: relative;
+    padding: 370px 0;
+    font-size: 0;
+}
+
+.main_video .scroll {
+    position: absolute;
+    color: rgba(51, 51, 51, 0.7);
+    font-size: 50px;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scroll 1s infinite;
+}
+
+@keyframes scroll {
+    from {
+        bottom: -60px;
+    }
+
+    to {
+        bottom: -80px;
+    }
+}
+
+/* 쇼핑 -- 상품 슬라이드 */
+.shopping {
+    position: relative;
+    padding: 200px 0;
+}
+
+.shopping .container {
+    width: 1208px;
+}
+
+.shopping h2 {
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 35px 0;
+}
+
+.shopping .tab_menu {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 0 0 20px 0;
+}
+
+.tab_menu>li>a {
+    display: inline-block;
+    line-height: 35px;
+    padding: 0 20px;
+    border: 1px solid #333;
+    text-align: center;
+}
+
+.tab_menu>li.on a {
+    background: #333;
+    color: #fff;
+}
+
+.tab_content {
+    position: relative;
+}
+
+.tab_content>li {
+    position: absolute;
+    inset: 0 0 0 0;
+    visibility: hidden;
+    padding: 10px 0;
+}
+
+.tab_content>li.on {
+    visibility: visible;
+}
+
+.tab_content .shop_slider {
+    padding: 0 0 160px 0;
+}
+
+.tab_content .shop_slider figure {
+    padding: 0 5px;
+}
+
+.shop_slider .price {
+    padding: 15px 0;
+}
+
+.shop_slider .price h3 {
+    font-size: 19px;
+}
+
+
+.tab_content .shop_arrow i {
+    position: absolute;
+    font-size: 45px;
+    bottom: -3%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shop_arrow i:nth-child(1) {
+    margin: 0 0 0 -650px;
+}
+
+.shop_arrow i:nth-child(2) {
+    margin: 0 0 0 650px;
 }
