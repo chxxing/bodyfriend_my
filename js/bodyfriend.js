@@ -6,7 +6,7 @@ $(function () {
         mute: true,
         playOnlyIfVisible: true,
         loop: true,
-        abundance: 0.12,
+        abundance: 0,
     });
 
     // $('a').on('click', function (e) {
