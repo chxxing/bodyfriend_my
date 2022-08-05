@@ -88,7 +88,8 @@
 /* 메인 유튜브 동영상 */
 .main_video {
     position: relative;
-    padding: 370px 0;
+    padding: 400px 0;
+    margin: 0 0 150px 0;
     font-size: 0;
 }
 
@@ -96,7 +97,7 @@
     position: absolute;
     color: rgba(51, 51, 51, 0.7);
     font-size: 50px;
-    bottom: -60px;
+    bottom: -50px;
     left: 50%;
     transform: translateX(-50%);
     animation: scroll 1s infinite;
@@ -104,22 +105,22 @@
 
 @keyframes scroll {
     from {
-        bottom: -60px;
+        bottom: -50px;
     }
 
     to {
-        bottom: -80px;
+        bottom: -60px;
     }
 }
 
 /* 쇼핑 -- 상품 슬라이드 */
 .shopping {
     position: relative;
-    padding: 200px 0;
+    padding: 50px 0 0 0;
 }
 
 .shopping .container {
-    width: 1208px;
+    width: 1230px;
 }
 
 .shopping h2 {
@@ -164,30 +165,46 @@
     visibility: visible;
 }
 
-.tab_content .shop_slider {
-    padding: 0 0 160px 0;
+.tab_content .shop_slider figure {
+    padding: 0 15px;
 }
 
-.tab_content .shop_slider figure {
-    padding: 0 5px;
+.shop_slider h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 10px 0 0 0;
 }
 
 .shop_slider .price {
+    display: flex;
     padding: 15px 0;
 }
 
-.shop_slider .price h3 {
-    font-size: 19px;
+.shop_slider .price>div {
+    display: flex;
+    flex-wrap: wrap;
+    line-height: 1.55;
 }
 
+.shop_slider .p_01 {
+    flex: 1;
+    flex-direction: column;
+}
 
-.tab_content .shop_arrow i {
+.shop_slider .p_02 {
+    flex: 2;
+    justify-content: flex-end;
+}
+
+.shop_arrow i {
     position: absolute;
     font-size: 45px;
-    bottom: -3%;
+    bottom: -110%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
+
 
 .shop_arrow i:nth-child(1) {
     margin: 0 0 0 -650px;
@@ -195,4 +212,171 @@
 
 .shop_arrow i:nth-child(2) {
     margin: 0 0 0 650px;
+}
+
+/* 문의 */
+.qna {
+    padding: 570px 0 150px 0;
+}
+
+.qna .fixed {
+    background: url(../img/background.jpg) no-repeat fixed center center/cover;
+    filter: grayscale(80%);
+    padding: 100px 0;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0 0 1px #000;
+}
+
+.qna .fixed h2 {
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.qna .fixed h2::after {
+    content: "";
+    display: block;
+    margin: 20px auto 20px;
+    width: 1px;
+    height: 40px;
+    background: #fff;
+}
+
+.qna .fixed p {
+    font-size: 15.5px;
+    font-weight: 300;
+    margin: 0 0 45px 0;
+    line-height: 1.45;
+}
+
+.qna .qna_box a {
+    border: 1px solid #fff;
+    padding: 7px 20px;
+    font-size: 17px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.qna .qna_box a:hover {
+    color: #333;
+    background: #fff;
+    text-shadow: none;
+}
+
+/* 이벤트 */
+.event {
+    padding: 0 0 150px 0;
+}
+
+.event .container {
+    position: relative;
+    width: 1230px;
+}
+
+.event h2 {
+    font-size: 27px;
+    font-weight: 700;
+    text-align: center;
+    margin: 0 0 35px 0;
+}
+
+.event_slider {
+    padding: 0 0 15px 0;
+}
+
+.event_slider figure {
+    margin: 0 15px;
+}
+
+.event_arrow i {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.event_arrow i:nth-child(1) {
+    margin: 0 0 0 -640px;
+}
+
+.event_arrow i:nth-child(2) {
+    margin: 0 0 0 640px;
+}
+
+.event_auto figure {
+    margin: 0 15px;
+}
+
+/* footer */
+.footer {
+    font-size: 13px;
+    font-weight: 300;
+    border-top: 1px solid #c4c4c480;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .top {
+    line-height: 70px;
+    border-bottom: 1px solid #c4c4c480;
+}
+
+.footer .top li {
+    display: inline-block;
+}
+
+.footer .top li~li::before {
+    content: "";
+    display: inline-block;
+    margin: 0 17px;
+    width: 1px;
+    height: 10px;
+    background: #c4c4c4;
+}
+
+.footer .top i {
+    font-size: 17px;
+    margin: 0 0 0 5px;
+    padding: 6px;
+    border: 1px solid #c4c4c4;
+    border-radius: 10px;
+}
+
+.footer .bottom {
+    padding: 30px 0;
+    line-height: 30px;
+}
+
+.footer .bottom address>dl {
+    display: flex;
+}
+
+.footer .bottom address>dl>dd~dd::before {
+    content: "";
+    display: inline-block;
+    margin: 0 10px;
+    width: 1px;
+    height: 10px;
+    background: #c4c4c4;
+}
+
+.footer .bottom .family_link {
+    align-self: center;
+}
+
+.footer .bottom select {
+    background: rgba(51, 51, 51, 0.8);
+    color: #fff;
+    padding: 5px 20px;
+    border: none;
+}
+
+.footer .bottom option {
+    color: #fff;
+    background: rgba(51, 51, 51, 0.8);
 }

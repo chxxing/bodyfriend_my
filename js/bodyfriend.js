@@ -6,7 +6,7 @@ $(function () {
         mute: true,
         playOnlyIfVisible: true,
         loop: true,
-        abundance: 0.12,
+        abundance: 0,
     });
 
     // $('a').on('click', function (e) {
@@ -38,5 +38,27 @@ $(function () {
 
     $('.shop_arrow i:nth-child(2)').on('click', function () {
         $('.shop_slider').slick('slickNext');
+    })
+
+    $('.event_slider').slick({
+        arrows: false,
+        slidesToShow: 2,
+    })
+
+    $('.event_arrow i:nth-child(1)').on('click', function () {
+        $('.event_slider').slick('slickPrev');
+    })
+
+    $('.event_arrow i:nth-child(2)').on('click', function () {
+        $('.event_slider').slick('slickNext');
+    })
+
+    $('.event_auto').slick({
+        arrows: false,
+        dots: false,
+        slidesToShow: 3,
+        pauseOnFocus: false,
+        autoplay: true,
+        autoplaySpeed: 800,
     })
 })
